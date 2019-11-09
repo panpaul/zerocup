@@ -1,26 +1,37 @@
 <template>
-    <el-container>
-        <el-header>Header</el-header>
+    <div id="app">
         <el-container>
+            <el-header>
+                <Menu/>
+            </el-header>
             <el-container>
-                <el-main>Main</el-main>
-                <el-footer>Footer</el-footer>
+                <el-container>
+                    <el-main>
+                        <router-view/>
+                    </el-main>
+                    <el-footer>
+                        <Footer/>
+                    </el-footer>
+                </el-container>
+                <el-aside width="300px">Aside</el-aside>
             </el-container>
-            <el-aside width="300px">Aside</el-aside>
         </el-container>
-    </el-container>
+
+    </div>
 </template>
 
 <script>
+    import Menu from '@/components/Menu'
+    import Footer from '@/components/Footer'
 
     export default {
         name: 'app',
-        components: {}
+        components: {Menu, Footer}
     }
 </script>
 
 <style>
-    .el-header, .el-footer {
+    .el-footer {
         background-color: #B3C0D1;
         color: #333;
         text-align: center;
