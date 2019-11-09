@@ -1,5 +1,9 @@
 # zerocup
 
+武汉大学零杯网页设计大赛仓库。
+
+一个关于AI时代的网页。
+
 ## Project setup
 ```
 npm install
