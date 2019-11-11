@@ -1,9 +1,9 @@
-package model
+package models
 
 import (
-	"comment/util"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
+	"comment/util"
 	"time"
 )
 

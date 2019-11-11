@@ -1,17 +1,19 @@
-package serializer
+package serializers
 
 import (
-	"comment/model"
-	"time"
+	"comment/config"
+	"comment/models"
 )
 
 type CommentSerializer struct {
 	ID        uint              `json:"id"`
 	User      UserSerializer    `json:"user"`
-	ArticleID uint              `json:"Article_id"`
+	ArticleID uint              `json:"article_id"`
 	Content   string            `json:"content"`
 	CreatedAt string            `json:"created_at"`
 	Replys    []ReplySerializer `json:"replys"`
+	LikeCount uint              `json:"like_count"`
+	IsLike    bool              `json:"is_like"`
 }
 
 type ReplySerializer struct {
@@ -24,8 +26,7 @@ type ReplySerializer struct {
 	CreatedAt string         `json:"created_at"`
 }
 
-// 序列化回复
-func BuildReply(item model.Comment) ReplySerializer {
+func BuildReply(item models.Comment) ReplySerializer {
 	return ReplySerializer{
 		ID:        item.ID,
 		User:      BuildUser(item.User),
@@ -33,12 +34,11 @@ func BuildReply(item model.Comment) ReplySerializer {
 		ParentID:  item.ParentID,
 		RootID:    item.RootID,
 		Content:   item.Content,
-		CreatedAt: item.CreatedAt.Format(time.Now().Format("2006-01-02 15:04:05")),
+		CreatedAt: item.CreatedAt.Format(config.CurrentTime),
 	}
 }
 
-// 序列化评论
-func BuildComment(item model.Comment) CommentSerializer {
+func BuildComment(item models.Comment) CommentSerializer {
 	var replys []ReplySerializer
 	if len(item.Replys) != 0 {
 		for _, reply := range item.Replys {
@@ -50,12 +50,14 @@ func BuildComment(item model.Comment) CommentSerializer {
 		User:      BuildUser(item.User),
 		ArticleID: item.ArticleID,
 		Content:   item.Content,
-		CreatedAt: item.CreatedAt.Format(time.Now().Format("2006-01-02 15:04:05")),
+		CreatedAt: item.CreatedAt.Format(config.CurrentTime),
 		Replys:    replys,
+		LikeCount: item.LikeCount,
+		IsLike:    item.IsLike,
 	}
 }
 
-func BuildComments(items []model.Comment) []CommentSerializer {
+func BuildComments(items []models.Comment) []CommentSerializer {
 	var comments []CommentSerializer
 	for _, item := range items {
 		comments = append(comments, BuildComment(item))

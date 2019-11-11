@@ -1,14 +1,18 @@
 package main
 
 import (
-	"comment/conf"
-	"comment/server"
+	"comment/config"
+	"comment/router"
 )
 
 func main() {
 	// 从配置文件读取配置
-	conf.Init()
+	config.Init()
 	// 装载路由
-	r := server.NewRouter()
-	r.Run(":3000")
+	r := router.NewRouter()
+
+	if err := r.Run(":8888"); err != nil {
+		panic(err)
+	}
 }
+
