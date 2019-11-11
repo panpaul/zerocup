@@ -1,0 +1,16 @@
+body {
+  width: 1000px;
+  margin: 0 auto 30px;
+}
+
+html {
+  height: 101%;
+}
+
+hr {
+  height:2px;
+  border:none;
+  border-top:1px dotted gray;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
