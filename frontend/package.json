@@ -1,8 +1,8 @@
 {
-  "name": "giligili",
+  "name": "zerocup",
   "version": "1.0.0",
-  "description": "My solid Nuxt.js project",
-  "author": "xianxuhua",
+  "description": "zerocup",
+  "author": "zerocup",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "axios": "^0.19.0",
+    "core-js": "^2.6.2",
     "element-ui": "^2.12.0",
     "js-cookie": "^2.2.1",
     "nuxt": "^2.0.0",
