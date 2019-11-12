@@ -21,4 +21,5 @@ yarn-error.log*
 *.sw?
 *.exe
 
-backend/static/*
+backend/views/.nuxt/*
+

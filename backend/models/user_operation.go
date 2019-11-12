@@ -3,7 +3,7 @@ package models
 import "time"
 
 const (
-	CommentEveryPageCount = 5
+	CommentEveryPageCount = 500
 )
 
 type Comment struct {
