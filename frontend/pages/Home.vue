@@ -2,7 +2,7 @@
     <div class="home">
         <img alt="Vue logo" src="../assets/logo.png">
         <HelloWorld msg="Welcome to Your Vue.js App"/>
-		<Comment/>
+		<Comment article_id=1 />
     </div>
 </template>
 
