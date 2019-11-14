@@ -30,6 +30,12 @@
                     <el-menu-item index="Ref"><a href="https://github.com/panpaul/zerocup" target="_blank">Github</a>
                     </el-menu-item>
                 </el-col>
+				<el-col :lg="2" :md="3" :sm="3" :xl="1" :xs="3">
+					<el-menu-item index="login">登录</el-menu-item>
+				</el-col>
+				<el-col :lg="2" :md="3" :sm="3" :xl="1" :xs="3">
+                    <el-menu-item index="register">注册</el-menu-item>
+                </el-col>
             </el-row>
         </el-menu>
     </div>
