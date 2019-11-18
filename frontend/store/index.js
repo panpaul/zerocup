@@ -3,7 +3,7 @@ import Vuex from "vuex"
 
 Vue.use(Vuex);
 
-const store = ()=> new Vuex.Store({
+const store = () => new Vuex.Store({
   state: {
     token: "",
   },
@@ -12,9 +12,7 @@ const store = ()=> new Vuex.Store({
       state.token = token;
     },
   },
-  actions: {
-
-  },
+  actions: {},
 });
 
 export default store;

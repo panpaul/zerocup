@@ -2,7 +2,7 @@
     <div class="home">
         <img alt="Vue logo" src="../assets/logo.png">
         <HelloWorld msg="Welcome to Your Vue.js App"/>
-		<Comment article_id=1 />
+        <Comment article_id=1/>
     </div>
 </template>
 
@@ -14,8 +14,8 @@
     export default {
         name: 'Home',
         components: {
-			HelloWorld,
-			Comment
+            HelloWorld,
+            Comment
         }
     }
 </script>
