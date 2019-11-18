@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="commentContainer">
         <el-form :model="ruleForm" :rules="rules" ref="ruleForm" style="margin-top: 30px" v-if="$store.state.token">
             <el-form-item prop="content">
                 <el-input v-model="ruleForm.content"

@@ -2,7 +2,8 @@
     <div id="desktop">
         <el-container>
             <el-header>
-                <Menu/>
+                <span style="float: left;">Logo</span>
+                <Menu style="float: right;"/>
             </el-header>
             <el-container>
                 <el-container>
@@ -13,7 +14,7 @@
                         <Footer/>
                     </el-footer>
                 </el-container>
-                <el-aside width="20%">Aside</el-aside>
+                <Robot/>
             </el-container>
         </el-container>
 
@@ -23,14 +24,21 @@
 <script>
     import Menu from '@/components/Menu'
     import Footer from '@/components/Footer'
+    import Robot from '@/components/Robot'
 
     export default {
         name: 'desktop',
-        components: {Menu, Footer}
+        components: {Menu, Footer, Robot}
     }
 </script>
 
 <style>
+    .el-header {
+        background-color: #B3C0D1;
+        color: #333;
+        line-height: 60px;
+    }
+
     .el-footer {
         background-color: #B3C0D1;
         color: #333;
@@ -38,19 +46,17 @@
         line-height: 60px;
     }
 
-    .el-aside {
-        background-color: #D3DCE6;
-        color: #333;
-        text-align: center;
-        line-height: 200px;
-    }
-
     .el-main {
         background-color: #E9EEF3;
+        text-align: center;
         color: #333;
     }
 
     body > .el-container {
         margin-bottom: 40px;
+    }
+
+    body {
+        width: 100%;
     }
 </style>

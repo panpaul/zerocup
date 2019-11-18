@@ -1,13 +1,13 @@
 <template>
-    <div id="container">
-        <ul class="content" ref="charView">
+    <div id="robotContainer">
+        <ul class="robotContent" ref="charView">
             <li :key="index" v-for="(item, index) in messageList">
                 <span :class="'span'+(item.myself?'right':'left')">{{item.message}}</span>
             </li>
         </ul>
-        <div class="footer">
+        <div class="robotFooter">
             <input @keyup.enter='chat' id="text" placeholder="说点什么吧..." type="text" v-model.trim="inputValue"/>
-            <span @click="btn2()" id="btn">发送</span>
+            <span @click="sendBtn()" id="btn">发送</span>
         </div>
     </div>
 </template>
@@ -15,7 +15,7 @@
 <script>
     import $ from 'jquery'
 
-    var content = $(".content");
+    var content = $(".robotContent");
 
     export default {
 
@@ -29,7 +29,7 @@
             }
         },
         methods: {
-            btn2() {
+            sendBtn() {
                 this.messageList.push({
                     message: this.inputValue,
                     myself: true
@@ -38,7 +38,7 @@
                     url: 'http://www.tuling123.com/openapi/api',
                     type: 'post',
                     data: {
-                        key: '',//apikey
+                        key: '38b9f17cf42084cafd7b88da1fae3c60',//apikey
                         info: this.inputValue
                     },
                     success: (data) => {
@@ -62,31 +62,32 @@
         margin: 0;
         padding: 0;
         list-style: none;
-        font-family: '微软雅黑'
+        font-family: '微软雅黑';
     }
 
-    #container {
-        width: 40vw;
-        height: 70vh;
-        background: #eee;
-        position: relative;
+    #robotContainer {
         box-shadow: 10px 10px 25px #777;
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        opacity: 1;
+        width: 400px;
+        height: 200px;
     }
 
-    .footer {
-        width: 40vw;
-        height: 70px;
+    .robotFooter {
+        width: 100%;
+        height: 45px;
         background: #666;
         position: absolute;
         bottom: 0;
         overflow: hidden;
-
     }
 
-    .footer input {
+    .robotFooter input {
         margin-top: 10px;
-        width: 33vw;
-        height: 5vh;
+        width: 85%;
+        height: 45%;
         outline: none;
         font-size: 16px;
         text-indent: 10px;
@@ -95,36 +96,37 @@
         margin-left: 5px;
     }
 
-    .footer span {
-        margin-top: 10px;
+    .robotFooter span {
+        margin-top: 12px;
         display: inline-block;
-        width: 5vw;
-        height: 5vh;
+        width: 10%;
+        height: 50%;
         background: rgb(200, 221, 8);
         font-weight: 900;
-        line-height: 45px;
         cursor: pointer;
         text-align: center;
         position: absolute;
-        right: 10px;
+        right: 6px;
         border-radius: 6px;
     }
 
-    .content {
+    .robotContent {
         font-size: 20px;
-        width: 40vw;
-        height: 61vh;
+        width: 95%;
+        height: 100%;
         overflow: auto;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .content li {
+    .robotContent li {
         margin-top: 10px;
         display: block;
         clear: both;
         overflow: hidden;
     }
 
-    .content li span {
+    .robotContent li span {
         padding: 10px;
         border-radius: 10px;
         max-width: 310px;
@@ -133,13 +135,15 @@
         word-break: break-all
     }
 
-    .content li span.spanleft {
+    .robotContent li span.spanleft {
         float: left;
         background: #fff;
     }
 
-    .content li span.spanright {
+    .robotContent li span.spanright {
         float: right;
         background: #7cfc00;
     }
+
+
 </style>
