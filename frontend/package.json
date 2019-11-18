@@ -18,7 +18,8 @@
     "nuxt": "^2.0.0",
     "vue": "latest",
     "vuex": "^3.1.1",
-    "vuex-persistedstate": "^2.5.4"
+	"vuex-persistedstate": "^2.5.4",
+	"jquery": "^3.4.1"
   },
   "devDependencies": {}
 }
