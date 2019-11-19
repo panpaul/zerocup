@@ -62,7 +62,6 @@
         margin: 0;
         padding: 0;
         list-style: none;
-        font-family: '微软雅黑';
     }
 
     #robotContainer {

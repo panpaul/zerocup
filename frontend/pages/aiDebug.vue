@@ -12,7 +12,6 @@
 <script>
     import {MnistData} from '@/tf/mnist/data';
     import * as model from '@/tf/mnist/model';
-    import * as ui from '@/tf/mnist/ui';
 
     let data;
     export default {
@@ -40,7 +39,6 @@
 
                 this.msg = [];
                 this.msg.push({batch, predictions, labels});
-                this.messages = ui.showTestResults(batch, predictions, labels, this.messages, this.images);
 
             }
         },
