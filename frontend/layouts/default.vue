@@ -48,7 +48,6 @@
 
     .el-main {
         background-color: #E9EEF3;
-        text-align: center;
         color: #333;
     }
 

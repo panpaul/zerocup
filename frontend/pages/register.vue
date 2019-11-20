@@ -67,7 +67,7 @@
               if (rep.data.status == 200) {
                 this.$message.success("注册成功");
                 setInterval(() => {
-                  location.href = "http://localhost:3000/login"
+                  location.href = "/login"
                 }, 1000)
               } else if (rep.data.status == 40002) {
                 this.$message.error("用户名已被注册")

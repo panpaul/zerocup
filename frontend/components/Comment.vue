@@ -20,7 +20,7 @@
         <div class="comment" v-for="item in comments" v-if="$store.state.token">
 
             <hr>
-            <img :src="item.user.head_img" class="comment_user_head">
+            <img src="../static/user.png" class="comment_user_head">
             <div>{{item.user.username}}</div>
             <span class="date">{{item.created_at}}</span>
 
@@ -33,7 +33,7 @@
 
 
                 <div style="padding-bottom: 15px" v-for="reply in item.replys">
-                    <img :src="reply.user.head_img" class="comment_user_head">
+                    <img src="../static/user.png" class="comment_user_head">
                     <span>{{reply.user.username}}</span><span>: </span>
                     <span>@{{reply.reply_to.username}}</span>
                     <div class="date">{{reply.created_at}}</div>
@@ -228,6 +228,9 @@
 </script>
 
 <style scoped>
+	.container {
+		max-width: 1000px;
+	}
     .content {
         /*min-height: 30px;*/
         word-wrap: break-word;

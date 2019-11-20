@@ -13,15 +13,20 @@
             </p>
             <p>人工智能从诞生以来，理论和技术日益成熟，应用领域也不断扩大，可以设想，未来人工智能带来的科技产品，将会是人类智慧的“容器”。</p>
         </div>
-        <div>
-
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+		<div>
         </div>
+        <Comment article_id="1"/>
     </div>
 </template>
 
 <script>
+	import Comment from '@/components/Comment.vue'
     export default {
-        name: "description"
+		name: "description",
+        components: {
+            Comment
+		},
     }
 </script>
 
