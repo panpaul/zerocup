@@ -3,12 +3,12 @@
         <el-form :model="ruleForm" :rules="rules" ref="ruleForm" style="margin-top: 30px" v-if="$store.state.token">
             <el-form-item prop="content">
                 <el-input :rows="3"
-                          placeholder="写下你的评论"
-                          show-word-limit
                           autofocus="true"
                           maxlength="250"
-                          type="textarea"
+                          placeholder="写下你的评论"
                           resize="none"
+                          show-word-limit
+                          type="textarea"
                           v-model="ruleForm.content"></el-input>
             </el-form-item>
             <el-form-item>
@@ -47,10 +47,10 @@
                     <el-form :model="ruleForm2" :rules="rules2" ref="ruleForm2">
                         <el-form-item prop="content">
                             <el-input :placeholder="placeholder"
-                                      resize="none"
                                       :rows="3"
                                       autofocus="true"
                                       maxlength="250"
+                                      resize="none"
                                       show-word-limit
                                       type="textarea"
                                       v-model="ruleForm2.content">
@@ -234,6 +234,7 @@
         word-break: break-all;
         overflow: hidden;
     }
+
     .comment_user_head {
         width: 50px;
         height: 50px;
@@ -241,9 +242,11 @@
         float: left;
         margin-right: 20px;
     }
+
     .el-tag {
         cursor: pointer;
     }
+
     .date {
         font-size: 13px;
     }

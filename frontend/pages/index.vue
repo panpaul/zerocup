@@ -1,6 +1,6 @@
 <template>
     <div class="home">
-        <img alt="Vue logo" src="../static/logo.png">
+        <img alt="logo" class="imgWidth" src="../static/logo.png">
         <HelloWorld msg="Welcome to Your Vue.js App"/>
         <Comment article_id="1"/>
     </div>
@@ -19,3 +19,9 @@
         }
     }
 </script>
+
+<style scoped>
+    .imgWidth {
+        width: 60%;
+    }
+</style>

@@ -57,7 +57,7 @@
         },
     }
 </script>
-<style scoped="">
+<style scoped>
     * {
         margin: 0;
         padding: 0;
@@ -70,13 +70,13 @@
         bottom: 30px;
         right: 30px;
         opacity: 1;
-        width: 400px;
-        height: 200px;
+        width: 40%;
+        height: 30%;
     }
 
     .robotFooter {
         width: 100%;
-        height: 45px;
+        height: 15%;
         background: #666;
         position: absolute;
         bottom: 0;
@@ -84,28 +84,27 @@
     }
 
     .robotFooter input {
-        margin-top: 10px;
+        margin-top: 6px;
         width: 85%;
         height: 45%;
         outline: none;
-        font-size: 16px;
-        text-indent: 10px;
+
         position: absolute;
-        border-radius: 6px;
+        border-radius: 3%;
         margin-left: 5px;
     }
 
     .robotFooter span {
-        margin-top: 12px;
+        margin-top: 6px;
         display: inline-block;
         width: 10%;
         height: 50%;
         background: rgb(200, 221, 8);
-        font-weight: 900;
         cursor: pointer;
         text-align: center;
+        font-size: 12px;
         position: absolute;
-        right: 6px;
+        right: 1%;
         border-radius: 6px;
     }
 
@@ -119,14 +118,14 @@
     }
 
     .robotContent li {
-        margin-top: 10px;
+        margin-top: 4%;
         display: block;
         clear: both;
         overflow: hidden;
     }
 
     .robotContent li span {
-        padding: 10px;
+        padding: 4%;
         border-radius: 10px;
         max-width: 310px;
         border: 1px solid #ccc;
