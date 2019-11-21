@@ -2,7 +2,7 @@
     <div id="desktop">
         <el-container>
             <el-header>
-                <span style="float: left;padding: 3px;"><img alt="logo" src="../static/logo1.png"></span>
+                <nuxt-link to="/"><span style="float: left;padding: 3px;"><img alt="logo" src="../static/logo1.png"></span></nuxt-link>
                 <Menu style="float: right;"/>
             </el-header>
             <el-container>
