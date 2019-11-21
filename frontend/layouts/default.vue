@@ -33,6 +33,9 @@
 </script>
 
 <style>
+  #desktop {
+	transition: all .5s cubic-bezier(.55,0,.1,1);
+  }
     .el-header {
         background-color: #B3C0D1;
         color: #333;

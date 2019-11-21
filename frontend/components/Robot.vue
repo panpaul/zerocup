@@ -70,7 +70,8 @@
         bottom: 30px;
         right: 30px;
         opacity: 1;
-        width: 40%;
+		width: 40%;
+		max-width: 700px;
         height: 30%;
     }
 

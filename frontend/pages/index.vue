@@ -1,6 +1,7 @@
 <template>
-    <div class="home":style="bg">
-        <img alt="logo" class="imgWidth" src="../static/logo.png" @click="desp">
+    <div class="container":style="bg">
+		<nuxt-link to="/description">
+        <img alt="logo" class="imgWidth" src="../static/logo.png"></nuxt-link>
 		<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 		<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 		<p>点击上方logo跳转简介&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -24,12 +25,6 @@
     	}
 		},
         name: 'Home',
-		methods: 
-		{
-			desp() {
-				location.href = "/description"
-			}
-		}
     }
 </script>
 

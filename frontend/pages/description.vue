@@ -1,5 +1,5 @@
 <template>
-    <div id="desc">
+    <div id="desc" class="container">
         <el-card :body-style="{ padding: '0px' }" class="img" shadow="always">
             <img alt="AI WordCloud" src="../static/wordcloud-alpha.png"/>
             <div style="padding: 14px;">
@@ -23,6 +23,7 @@
 <script>
 	import Comment from '@/components/Comment.vue'
     export default {
+		transition: 'bounce',
 		name: "description",
         components: {
             Comment
