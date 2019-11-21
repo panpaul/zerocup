@@ -16,7 +16,7 @@
 
     export default {
 		data () {
-    	return {
+    	return {	
 		    bg: {
                 backgroundImage: "url(" + require("../static/background.jpg") + ")",
                 backgroundRepeat: "no-repeat",

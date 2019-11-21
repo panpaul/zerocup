@@ -7,9 +7,8 @@
                  mode="horizontal"
 				 router
         >
-
-            <el-menu-item><nuxt-link to="/">首页</nuxt-link></el-menu-item>
-            <el-menu-item><nuxt-link to="/description">介绍</nuxt-link></el-menu-item>
+            <el-menu-item index="/">首页</el-menu-item>
+            <el-menu-item index="description">介绍</el-menu-item>
             <el-submenu index="ShowCase">
                 <template slot="title">AI实践</template>
                 <el-menu-item index="2-1">选项1</el-menu-item>

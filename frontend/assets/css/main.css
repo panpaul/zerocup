@@ -10,7 +10,7 @@ hr {
     margin-top: 10px;
     margin-bottom: 10px;
 } 
-  #desktop {
+  .container {
 	transition: all .5s cubic-bezier(.55,0,.1,1);
   }
   
