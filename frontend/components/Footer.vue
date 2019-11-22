@@ -1,5 +1,5 @@
 <template>
     <div id="footer">
-        <span>this is the footer</span>
+        <span>@取个名好难</span>
     </div>
 </template>

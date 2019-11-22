@@ -76,6 +76,7 @@
         right: -40px;
         position: fixed;
         float: bottom;
+        z-index: 999;
     }
 
     #robotContainer {
