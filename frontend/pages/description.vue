@@ -22,6 +22,7 @@
             <img class="img2" src="http://www.elecfans.com/uploads/allimg/170713/01001263T_0.jpg">
         </div>
         <div>
+
         </div>
         <Comment article_id="1"/>
     </div>
