@@ -28,8 +28,7 @@
             因此技术是可行的。 至于是否会像未来简史的作者Uval担心的那样将人类分成两个物种，我认为这样的可能并不大， 因为数据有关的技术从一个人迁移到另一个人成本不大。 正是因为有了AI的远程医疗系统，
             有些非常贫穷的地区目前可以接受到最先进地区的诊疗效果，这点上看AI是在消除不平等。
         </p>
-        <img src="http://www.mhealthchina.org/wp-content/uploads/2018/05/2018051608530124.jpg"
-             style="width:40%;margin-left:30%;">
+        <img src="http://www.mhealthchina.org/wp-content/uploads/2018/05/2018051608530124.jpg">
         <Comment article_id="3"/>
     </div>
 </template>
@@ -46,4 +45,9 @@
 </script>
 
 <style scoped>
+    img {
+        width: 40%;
+        margin-left: calc((100% - 500px) / 2);
+        max-width: 500px;
+    }
 </style>

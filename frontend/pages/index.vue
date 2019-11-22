@@ -5,18 +5,15 @@
 		<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 		<br/><br/><br/><br/><br/><br/><br/><br/>
 		<br/><br/><br/><br/><br/>
-		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			点击上方logo跳转简介&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+		<p>点击上方logo跳转简介</p>
 		<br/><br/><br/><br/><br/>
     </div>
 </template>
 
 <script>
-    // @ is an alias to /src
-    import HelloWorld from '@/components/HelloWorld.vue'
+	// @ is an alias to /src
 
-    export default {
+	export default {
 		data () {
     	return {	
 		    bg: {
@@ -37,6 +34,7 @@
     }
 	p {
 		text-align: right;
+		margin-right: 10%;
 		font-size:28px;
 		color: #FFFFFF;
 		max-width: 100%;
