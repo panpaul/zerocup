@@ -20,11 +20,15 @@
             分析： 这个故事是展示AI对人类社交可能产生的影响， 人与人的最佳匹配变得太过容易， 会不会最后动摇了婚姻家庭等各类最基础的人类关系纽带。 倘若一段关系的开始，仅仅是在你的个人助理app里发出一条请求，
             还会有人需要长久的关系吗？
         </p>
-		<br/><br/>
-		<el-button-group>
-		<nuxt-link to="/story_1"><el-button type="primary" icon="el-icon-arrow-left">上一篇</el-button></nuxt-link>
-		<nuxt-link to="/story_3"><el-button type="primary">下一篇<i class="el-icon-arrow-right el-icon--right"></i></el-button></nuxt-link>
-		</el-button-group>
+        <br/><br/>
+        <el-button-group>
+            <nuxt-link to="/story_1">
+                <el-button icon="el-icon-arrow-left" type="primary">上一篇</el-button>
+            </nuxt-link>
+            <nuxt-link to="/story_3">
+                <el-button type="primary">下一篇<i class="el-icon-arrow-right el-icon--right"></i></el-button>
+            </nuxt-link>
+        </el-button-group>
         <Comment article_id="4"/>
     </div>
 </template>
@@ -46,7 +50,8 @@
         margin-left: calc((100% - 300px) / 2);
         max-width: 300px;
     }
-	.el-button-group {
-		margin-left: calc((68% - 500px) / 2);
-	}
+
+    .el-button-group {
+        margin-left: calc((68% - 500px) / 2);
+    }
 </style>
