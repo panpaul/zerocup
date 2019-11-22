@@ -70,4 +70,9 @@ h2 {
 	margin-left: auto;
 	margin-right: auto;
 }
+h3 {
+	max-width: 1100px;
+	margin-left: auto;
+	margin-right: auto;
+}
 </style>
