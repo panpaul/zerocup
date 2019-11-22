@@ -12,7 +12,8 @@
 </template>
 
 <script>
-	import Comment from '@/components/Comment.vue'
+    import Comment from '@/components/Comment.vue'
+
     export default {
 		name: "story3",
         components: {
