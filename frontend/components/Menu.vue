@@ -9,14 +9,7 @@
         >
             <el-menu-item index="/">首页</el-menu-item>
             <el-menu-item index="description">介绍</el-menu-item>
-            <el-submenu index="ShowCase">
-                <template slot="title">AI实践</template>
-                <el-menu-item index="2-1">选项1</el-menu-item>
-                <el-submenu index="2-2">
-                    <template slot="title">选项2</template>
-                    <el-menu-item index="2-2-1">选项1</el-menu-item>
-                </el-submenu>
-            </el-submenu>
+            <el-menu-item index="ai">AI实践</el-menu-item>
             <el-menu-item index="about">关于</el-menu-item>
             <el-submenu index="User">
                 <template slot="title">用户中心</template>
