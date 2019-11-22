@@ -44,6 +44,9 @@
              AI科学家的创业时机来临了。互联网时代，中国最好的创始人就是海归，因为只有他们看过互联网；APP时代，最好的创始人就是产品经理；O2O时代，最好的创始人就是懂得地推的销售加上很好的后台工程师；现在在AI时代，需要的就是AI科学家搭配上To B的销售了。因为AI做出来的产品绝大多数不是to C，而是to B，而to B的业务，仅凭科学家是很难做好的，也需要懂客户、企业级软件的销售和产品的人。而这两者，AI科学家更关键，因为AI科学家可能学会销售，但是销售专家可学不会AI。最理想的是有两个人能够一起，会帮助实现这个目的。
         </p>
 		<br/><br/>
+        <nuxt-link style="margin-left: 20%" to="/description">
+            <el-button round type="primary">看看其它</el-button>
+        </nuxt-link>
         <Comment article_id="9"/>
     </div>
 </template>

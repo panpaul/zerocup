@@ -30,6 +30,9 @@
             <nuxt-link to="/story_4">
                 <el-button disabled type="primary">下一篇<i class="el-icon-arrow-right el-icon--right"></i></el-button>
             </nuxt-link>
+            <nuxt-link to="/ai">
+                <el-button round type="primary">看看其它</el-button>
+            </nuxt-link>
         </el-button-group>
         <Comment article_id="6"/>
     </div>

@@ -20,10 +20,13 @@
                 <br/>弱人工智能：只用于解决某些特定领域的问题，比如 AlphaGo，只会下围棋。
             </p>
             <img class="img2" src="http://www.elecfans.com/uploads/allimg/170713/01001263T_0.jpg">
-        </div>
-        <div>
 
         </div>
+
+        <nuxt-link style="margin-left: 20%" to="/story_1">
+            <el-button round type="primary">看看其它</el-button>
+        </nuxt-link>
+
         <Comment article_id="1"/>
     </div>
 </template>

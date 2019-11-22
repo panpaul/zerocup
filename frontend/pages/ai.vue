@@ -20,6 +20,10 @@
                 <el-button :disabled=ShowResultDis @click="btnShowResult">看结果</el-button>
             </el-row>
         </div>
+        <br/><br/>
+        <nuxt-link to="/goldtime">
+            <el-button round type="primary">看看其它</el-button>
+        </nuxt-link>
 		<Comment article_id="8"/>
     </div>
 </template>
