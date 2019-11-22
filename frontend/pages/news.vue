@@ -33,7 +33,7 @@
     import Comment from '@/components/Comment.vue'
 
     export default {
-        name: "story1",
+        name: "news",
         components: {
             Comment
         },
