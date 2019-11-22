@@ -20,7 +20,7 @@
         <div class="comment" v-for="item in comments" v-if="$store.state.token">
 
             <hr>
-            <img src="../static/user.png" class="comment_user_head">
+            <img class="comment_user_head" src="../static/user.png">
             <div>{{item.user.username}}</div>
             <span class="date">{{item.created_at}}</span>
 
@@ -33,7 +33,7 @@
 
 
                 <div style="padding-bottom: 15px" v-for="reply in item.replys">
-                    <img src="../static/user.png" class="comment_user_head">
+                    <img class="comment_user_head" src="../static/user.png">
                     <span>{{reply.user.username}}</span><span>: </span>
                     <span>@{{reply.reply_to.username}}</span>
                     <div class="date">{{reply.created_at}}</div>
@@ -64,7 +64,7 @@
             </div>
 
         </div>
-        <p v-else><a href="/login">登录</a>请先登录</p>
+        <p v-else>要查看评论请先<a href="/login">登录</a></p>
     </div>
 </template>
 
@@ -228,9 +228,10 @@
 </script>
 
 <style scoped>
-	.container {
-		max-width: 1000px;
-	}
+    .container {
+        max-width: 1000px;
+    }
+
     .content {
         /*min-height: 30px;*/
         word-wrap: break-word;

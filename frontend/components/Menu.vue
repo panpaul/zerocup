@@ -9,6 +9,13 @@
         >
             <el-menu-item index="/">首页</el-menu-item>
             <el-menu-item index="description">介绍</el-menu-item>
+            <el-submenu index="Story">
+                <template slot="title">AI小故事</template>
+                <el-menu-item index="story_1">被重新定义的人类健康</el-menu-item>
+                <el-menu-item index="story_2">机器指引下的社交</el-menu-item>
+                <el-menu-item index="story_3">空无一人的车间</el-menu-item>
+                <el-menu-item index="story_4">机器控制的人生</el-menu-item>
+            </el-submenu>
             <el-menu-item index="ai">AI实践</el-menu-item>
             <el-menu-item index="about">关于</el-menu-item>
             <el-submenu index="User">
