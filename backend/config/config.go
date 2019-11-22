@@ -2,7 +2,7 @@ package config
 
 import (
 	"github.com/gin-gonic/gin"
-	"comment/cache"
+	//"comment/cache"
 	"comment/models"
 	"comment/util"
 	"os"
@@ -29,5 +29,5 @@ func Init() {
 
 	// 连接数据库
 	models.Database(os.Getenv("MYSQL_DSN"))
-	cache.Redis()
+	//cache.Redis()
 }

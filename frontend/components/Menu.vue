@@ -5,9 +5,8 @@
                  background-color="#B3C0D1"
                  class="menu"
                  mode="horizontal"
-                 router
+				 router
         >
-
             <el-menu-item index="/">首页</el-menu-item>
             <el-menu-item index="description">介绍</el-menu-item>
             <el-menu-item index="ai">AI实践</el-menu-item>

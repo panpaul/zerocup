@@ -52,7 +52,7 @@
                 const token = rep.data.data.token;
                 this.$store.commit('setToken', token);
                 Cookies.set('token', token, {expires: 30});
-                location.href = "http://localhost:3000/comment"
+                location.href = "/"
               } else {
                 this.$message.error("用户名或密码不正确")
               }

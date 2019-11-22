@@ -70,13 +70,14 @@
         bottom: 30px;
         right: 30px;
         opacity: 1;
-        width: 40%;
+		width: 40%;
+		max-width: 700px;
         height: 30%;
     }
 
     .robotFooter {
         width: 100%;
-        height: 15%;
+        height: 10%;
         background: #666;
         position: absolute;
         bottom: 0;
@@ -84,7 +85,7 @@
     }
 
     .robotFooter input {
-        margin-top: 6px;
+        margin-top: 5px;
         width: 85%;
         height: 45%;
         outline: none;
@@ -110,22 +111,22 @@
 
     .robotContent {
         font-size: 20px;
-        width: 95%;
-        height: 100%;
+        width: 100%;
+        height: 90%;
         overflow: auto;
         margin-left: auto;
         margin-right: auto;
     }
 
     .robotContent li {
-        margin-top: 4%;
+        margin-top: 0%;
         display: block;
         clear: both;
         overflow: hidden;
     }
 
     .robotContent li span {
-        padding: 4%;
+        padding: 2%;
         border-radius: 10px;
         max-width: 310px;
         border: 1px solid #ccc;

@@ -1,27 +1,41 @@
 <template>
-    <div class="home">
-        <img alt="logo" class="imgWidth" src="../static/logo.png">
-        <HelloWorld msg="Welcome to Your Vue.js App"/>
-        <Comment article_id="1"/>
+    <div class="container":style="bg">
+		<nuxt-link to="/description">
+        <img alt="logo" class="imgWidth" src="../static/logo.png"></nuxt-link>
+		<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+		<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+		<p>点击上方logo跳转简介&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+		<br/><br/><br/><br/><br/>
     </div>
 </template>
 
 <script>
     // @ is an alias to /src
     import HelloWorld from '@/components/HelloWorld.vue'
-    import Comment from '@/components/Comment.vue'
 
     export default {
+		data () {
+    	return {	
+		    bg: {
+                backgroundImage: "url(" + require("../static/background.jpg") + ")",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+            },
+    	}
+		},
         name: 'Home',
-        components: {
-            HelloWorld,
-            Comment
-        }
     }
 </script>
 
 <style scoped>
     .imgWidth {
-        width: 60%;
+        width: 40%;
+		float: right;
     }
+	p {
+		text-align: right;
+		font-size:28px;
+		color: #FFFFFF;
+	}
 </style>
