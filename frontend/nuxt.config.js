@@ -60,5 +60,14 @@ export default {
     },
     env: {
         baseUrl: process.env.BASE_URL || 'http://localhost:3000'
+    },
+    router: {
+        extendRoutes(routes) {
+            routes.push({
+                name: 'index',
+                path: '/index',
+                component: 'pages/index.vue',
+            })
+        }
     }
 }

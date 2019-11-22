@@ -1,13 +1,13 @@
 <template>
     <div id="menu">
-        <el-menu :default-active=activeIndex
+        <el-menu :default-active=this.$nuxt.$route.name
                  @select="handleSelect"
                  background-color="#B3C0D1"
                  class="menu"
                  mode="horizontal"
-				 router
+                 router
         >
-            <el-menu-item index="/">首页</el-menu-item>
+            <el-menu-item index="index">首页</el-menu-item>
             <el-menu-item index="description">介绍</el-menu-item>
             <el-submenu index="Story">
                 <template slot="title">AI小故事</template>
@@ -30,11 +30,7 @@
 
 <script>
     export default {
-        data() {
-            return {
-                activeIndex: "/",
-            };
-        },
+        name: "menu",
         methods: {
             handleSelect(key, keyPath) {
                 window.console.log(key, keyPath);
