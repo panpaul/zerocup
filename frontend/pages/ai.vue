@@ -1,7 +1,7 @@
 <template>
     <div id="ai">
         <div>
-            <p>在浏览器中训练一个AI模型</p>
+            <p>在浏览器中训练一个数字识别的AI模型</p>
         </div>
         <div>
             <el-row>
