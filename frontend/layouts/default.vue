@@ -59,4 +59,15 @@
     body {
         width: 100%;
     }
+
+p {
+	max-width: 1100px;
+	margin-left: auto;
+	margin-right: auto;
+}
+h2 {
+	max-width: 1100px;
+	margin-left: auto;
+	margin-right: auto;
+}
 </style>
