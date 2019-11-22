@@ -29,6 +29,11 @@
             有些非常贫穷的地区目前可以接受到最先进地区的诊疗效果，这点上看AI是在消除不平等。
         </p>
         <img src="http://www.mhealthchina.org/wp-content/uploads/2018/05/2018051608530124.jpg">
+		<br/><br/>
+		<el-button-group>
+		<el-button type="primary" icon="el-icon-arrow-left" disabled>上一篇</el-button>
+		<nuxt-link to="/story_2"><el-button type="primary">下一篇<i class="el-icon-arrow-right el-icon--right"></i></el-button></nuxt-link>
+		</el-button-group>
         <Comment article_id="3"/>
     </div>
 </template>
@@ -50,4 +55,7 @@
         margin-left: calc((100% - 500px) / 2);
         max-width: 500px;
     }
+	.el-button-group {
+		margin-left: calc((68% - 500px) / 2);
+	}
 </style>
