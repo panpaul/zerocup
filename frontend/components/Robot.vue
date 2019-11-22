@@ -1,14 +1,20 @@
 <template>
-    <div id="robotContainer">
-        <ul class="robotContent" ref="charView">
-            <li :key="index" v-for="(item, index) in messageList">
-                <span :class="'span'+(item.myself?'right':'left')">{{item.message}}</span>
-            </li>
-        </ul>
-        <div class="robotFooter">
-            <input @keyup.enter='chat' id="text" placeholder="说点什么吧..." type="text" v-model.trim="inputValue"/>
-            <span @click="sendBtn()" id="btn">发送</span>
-        </div>
+    <div class="floatImg">
+        <transition name="el-fade-in">
+            <div id="robotContainer" v-show="show">
+                <ul class="robotContent" ref="charView">
+                    <li :key="index" v-for="(item, index) in messageList">
+                        <span :class="'span'+(item.myself?'right':'left')">{{item.message}}</span>
+                    </li>
+                </ul>
+                <div class="robotFooter">
+                    <input @keyup.enter='chat' id="text" placeholder="说点什么吧..." type="text" v-model.trim="inputValue"/>
+                    <span @click="sendBtn()" id="btn">发送</span>
+                </div>
+            </div>
+        </transition>
+        <div class="floatImg"><img @click="show = !show" alt="robot" src="../static/1.gif"/></div>
+
     </div>
 </template>
 
@@ -25,7 +31,8 @@
                 //输入的内容,事先约定好的
                 inputValue: '',
                 //聊天的数组内容
-                messageList: []
+                messageList: [],
+                show: false,
             }
         },
         methods: {
@@ -64,14 +71,21 @@
         list-style: none;
     }
 
+    .floatImg {
+        bottom: -70px;
+        right: -40px;
+        position: fixed;
+        float: bottom;
+    }
+
     #robotContainer {
         box-shadow: 10px 10px 25px #777;
         position: fixed;
-        bottom: 30px;
+        bottom: 220px;
         right: 30px;
         opacity: 1;
-		width: 40%;
-		max-width: 700px;
+        width: 40%;
+        max-width: 700px;
         height: 30%;
     }
 
