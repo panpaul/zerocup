@@ -3,8 +3,10 @@
 		<nuxt-link to="/description">
         <img alt="logo" class="imgWidth" src="../static/logo.png"></nuxt-link>
 		<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-		<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-		<p>点击上方logo跳转简介&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<br/><br/><br/><br/><br/><br/><br/><br/>
+		<br/><br/><br/><br/><br/>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			点击上方logo跳转简介&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 		<br/><br/><br/><br/><br/>
     </div>
@@ -37,5 +39,6 @@
 		text-align: right;
 		font-size:28px;
 		color: #FFFFFF;
+		max-width: 100%;
 	}
 </style>
