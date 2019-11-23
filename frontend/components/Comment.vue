@@ -139,9 +139,10 @@
             }
         },
         created() {
-            window.console.log("/comment/"+this.article_id);
+		var aid = parseInt(this.article_id);
+            window.console.log("/comment/"+aid);
             // 获取所有评论
-            axios.get("/comment/"+this.article_id, {
+            axios.get("/comment/"+aid, {
             //axios.get("/comment/" + 1, {
                 headers: {token: this.$store.state.token}
             }).then(rep => {
@@ -154,10 +155,11 @@
         },
         methods: {
             submitComment() {
+				var aid = parseInt(this.article_id);
                 this.$refs.ruleForm.validate((valid) => {
                     if (valid) {
                         axios.post("/comment", {
-                            article_id: this.article_id,
+                            article_id: aid,
                             //article_id: 1,
                             content: this.ruleForm.content,
                         }, {
@@ -179,11 +181,12 @@
                 });
             },
             submitReply() {
+				var aid = parseInt(this.article_id);
                 this.$refs.ruleForm2[0].validate((valid) => {
                     if (valid) {
                         axios.post("/comment", {
                             reply_to_id: this.current_reply_to_user_id,
-                            article_id: this.article_id,
+                            article_id: aid,
                             //article_id: 1,
                             parent_id: this.current_parent_id,
                             root_id: this.current_root_id,

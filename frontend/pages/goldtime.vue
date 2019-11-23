@@ -50,7 +50,7 @@
         <nuxt-link style="margin-left: 20%" to="/description">
             <el-button round type="primary">看看其它</el-button>
         </nuxt-link>
-        <Comment article_id=9/>
+        <Comment article_id=9 />
     </div>
 </template>
 
