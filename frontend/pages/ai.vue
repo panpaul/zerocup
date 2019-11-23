@@ -24,7 +24,7 @@
         <nuxt-link to="/goldtime">
             <el-button round type="primary">看看其它</el-button>
         </nuxt-link>
-		<Comment article_id="8"/>
+		<Comment article_id=8 />
     </div>
 </template>
 

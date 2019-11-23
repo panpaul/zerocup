@@ -25,7 +25,7 @@
 				<el-button type="primary">下一篇<i class="el-icon-arrow-right el-icon--right"></i></el-button>
 			</nuxt-link>
 		</el-button-group>
-        <Comment article_id="5"/>
+        <Comment article_id=5 />
     </div>
 </template>
 

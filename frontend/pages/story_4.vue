@@ -36,7 +36,7 @@
                 <el-button round type="primary">看看其它</el-button>
             </nuxt-link>
         </el-button-group>
-        <Comment article_id="6"/>
+        <Comment article_id=6 />
     </div>
 </template>
 

@@ -74,7 +74,7 @@
     export default {
         name: "comment",
         props: {
-            article_id: String
+            article_id: Number
         },
         data() {
             return {
