@@ -45,7 +45,7 @@
                     url: 'http://www.tuling123.com/openapi/api',
                     type: 'post',
                     data: {
-                        key: '38b9f17cf42084cafd7b88da1fae3c60',//apikey
+                        key: '94f8d12688f7488fb0ebb5ccd89ff3da',//apikey
                         info: this.inputValue
                     },
                     success: (data) => {

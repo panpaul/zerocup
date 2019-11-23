@@ -73,6 +73,9 @@
 
     export default {
         name: "comment",
+        props: {
+            article_id: String
+        },
         data() {
             return {
                 article: 1,  // 对某一资源进行评论
@@ -136,9 +139,10 @@
             }
         },
         created() {
+            window.console.log("/comment/"+this.article_id);
             // 获取所有评论
-            //axios.get("/comment/"+this.article_id, {
-            axios.get("/comment/" + 1, {
+            axios.get("/comment/"+this.article_id, {
+            //axios.get("/comment/" + 1, {
                 headers: {token: this.$store.state.token}
             }).then(rep => {
                 console.log(rep.data.status);
@@ -153,8 +157,8 @@
                 this.$refs.ruleForm.validate((valid) => {
                     if (valid) {
                         axios.post("/comment", {
-                            //article_id: this.article_id,
-                            article_id: 1,
+                            article_id: this.article_id,
+                            //article_id: 1,
                             content: this.ruleForm.content,
                         }, {
                             headers: {
@@ -179,8 +183,8 @@
                     if (valid) {
                         axios.post("/comment", {
                             reply_to_id: this.current_reply_to_user_id,
-                            //article_id: this.article_id,
-                            article_id: 1,
+                            article_id: this.article_id,
+                            //article_id: 1,
                             parent_id: this.current_parent_id,
                             root_id: this.current_root_id,
                             content: this.ruleForm2.content,
