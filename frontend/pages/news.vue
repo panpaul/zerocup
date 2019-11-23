@@ -1,5 +1,7 @@
 <template>
     <div class="container" id="story1">
+		<p>朗读文章</p>
+		<div class="aud"><audio :src="require('@/static/audios/news.mp3')" controls></audio></div>
         <h2>当AI遇上武大，会擦出什么火花？</h2>
 		<img src="@/static/news1.webp"
              style="width:60%;margin-left:20%;">

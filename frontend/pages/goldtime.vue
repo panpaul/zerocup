@@ -1,5 +1,8 @@
 <template>
     <div class="container" id="goldtime">
+		<p>朗读文章</p>
+		<div class="aud"><audio :src="require('@/static/audios/goldtime.mp3')" controls></audio></div>
+
         <h2>李开复：AI技术处在黄金时代</h2>
         <p>
             未来AI（人工智能）技术在改变世界的进程中会扮演什么样的角色？我觉得AI会改变人们的职业。AI基于海量数据和算法得出判断，可以用于各种各样的行业和领域。决策、反馈、游戏行业，通过AI都发生了翻天覆地的变化。十年后，全世界翻译、记者、助理、警察、出租车、销售代表、客服、交易员、会计、管家等等的工作有90%都会被AI取代。

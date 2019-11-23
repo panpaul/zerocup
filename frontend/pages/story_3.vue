@@ -1,5 +1,7 @@
 <template>
 	<div id="story3">
+				<p>朗读文章</p>
+		<div class="aud"><audio :src="require('@/static/audios/story_3.mp3')" controls></audio></div>
 		<h2>空无一人的车间</h2>
 		<p>
 			我们再从人类社会尺度来看这个美丽新世界。 机器， 已经普遍的存在在了所有以前认为只有个体才完成的职位上。我们看到空无一人的汽车生产线，空无一人的医院， 即使是最精妙的技艺， 配备了最好的视觉和听觉识别系统，

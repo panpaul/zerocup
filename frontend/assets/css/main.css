@@ -3,6 +3,9 @@ body {
     margin: 0 auto 30px;
 }
 
+.aud {
+	margin-left: 19%;
+}
 hr {
     height: 2px;
     border: none;

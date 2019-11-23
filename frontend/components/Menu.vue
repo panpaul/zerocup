@@ -17,27 +17,39 @@
                 <el-menu-item index="story_4">机器控制的人生</el-menu-item>
             </el-submenu>
             <el-menu-item index="ai">AI实践</el-menu-item>
+            <el-menu-item index="news">武大AI</el-menu-item>
             <el-menu-item index="goldtime">黄金时代</el-menu-item>
             <el-submenu index="User" v-if="!$store.state.token">
                 <template slot="title">用户中心</template>
                 <el-menu-item index="login">登录</el-menu-item>
                 <el-menu-item index="register">注册</el-menu-item>
             </el-submenu>
-
+            <el-submenu index="User" v-if="$store.state.token">
+                <template slot="title">用户中心</template>
+                <el-menu-item index="login" @click="clearCookie()">注销</el-menu-item>
+            </el-submenu>
         </el-menu>
     </div>
 </template>
 
 <script>
+import Cookies from 'js-cookie'
     export default {
         name: "menu",
         methods: {
             handleSelect(key, keyPath) {
                 window.console.log(key, keyPath);
-            }
+			},
+			     clearCookie: function () {
+Cookies.remove('token');
+Cookies.remove('vuex');
+//location.reload();
+window.location.href="/login"; 
+            },
         }
-    }
+	}
 </script>
+
 
 <style>
     .el-menu {
