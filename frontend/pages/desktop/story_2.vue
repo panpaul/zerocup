@@ -1,7 +1,9 @@
 <template>
     <div id="story2">
-				<p>朗读文章</p>
-		<div class="aud"><audio :src="require('@/static/audios/story_2.mp3')" controls></audio></div>
+        <p>朗读文章</p>
+        <div class="aud">
+            <audio :src="require('@/static/audios/story_2.mp3')" controls></audio>
+        </div>
         <h2>机器指引下的社交</h2>
         <p>
             你是一个不善交际的AI程序员， 早上写了两小时程序， 你的大脑监控仪早已发现了你有效率减低趋势，于是， 它建议你出去走走。
@@ -24,19 +26,19 @@
         </p>
         <br/><br/>
         <el-button-group>
-            <nuxt-link to="/story_1">
+            <nuxt-link to="/desktop/story_1">
                 <el-button icon="el-icon-arrow-left" type="primary">上一篇</el-button>
             </nuxt-link>
-            <nuxt-link to="/story_3">
+            <nuxt-link to="/desktop/story_3">
                 <el-button type="primary">下一篇<i class="el-icon-arrow-right el-icon--right"></i></el-button>
             </nuxt-link>
         </el-button-group>
-        <Comment article_id=4 />
+        <Comment article_id="4"/>
     </div>
 </template>
 
 <script>
-    import Comment from '@/components/Comment.vue'
+    import Comment from '../../components/desktop/Comment.vue'
 
     export default {
         name: "story2",

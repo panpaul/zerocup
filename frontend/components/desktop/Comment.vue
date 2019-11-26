@@ -1,26 +1,26 @@
 <template>
-    <div class="commentContainer">
+    <div class="container">
         <el-form :model="ruleForm" :rules="rules" ref="ruleForm" style="margin-top: 30px" v-if="$store.state.token">
             <el-form-item prop="content">
-                <el-input v-model="ruleForm.content"
-                          type="textarea"
-                          :rows="3"
+                <el-input :rows="3"
                           autofocus="true"
                           maxlength="250"
-                          show-word-limit
+                          placeholder="写下你的评论"
                           resize="none"
-                          placeholder="写下你的评论"></el-input>
+                          show-word-limit
+                          type="textarea"
+                          v-model="ruleForm.content"></el-input>
             </el-form-item>
             <el-form-item>
 
 
-                <el-button type="primary" @click="submitComment" style="float: right">提交评论</el-button>
+                <el-button @click="submitComment" style="float: right" type="primary">提交评论</el-button>
             </el-form-item>
         </el-form>
-        <div class="comment" v-if="$store.state.token" v-for="item in comments">
+        <div class="comment" v-for="item in comments" v-if="$store.state.token">
 
             <hr>
-            <img :src="item.user.head_img" class="comment_user_head">
+            <img class="comment_user_head" src="../../static/user.png">
             <div>{{item.user.username}}</div>
             <span class="date">{{item.created_at}}</span>
 
@@ -32,8 +32,8 @@
             <div style="margin-left: 70px;">
 
 
-                <div v-for="reply in item.replys" style="padding-bottom: 15px">
-                    <img :src="reply.user.head_img" class="comment_user_head">
+                <div style="padding-bottom: 15px" v-for="reply in item.replys">
+                    <img class="comment_user_head" src="../../static/user.png">
                     <span>{{reply.user.username}}</span><span>: </span>
                     <span>@{{reply.reply_to.username}}</span>
                     <div class="date">{{reply.created_at}}</div>
@@ -46,25 +46,25 @@
                 <div v-if="current_root_id === item.id">
                     <el-form :model="ruleForm2" :rules="rules2" ref="ruleForm2">
                         <el-form-item prop="content">
-                            <el-input v-model="ruleForm2.content"
-                                      type="textarea"
+                            <el-input :placeholder="placeholder"
                                       :rows="3"
                                       autofocus="true"
                                       maxlength="250"
-                                      show-word-limit
                                       resize="none"
-                                      :placeholder="placeholder">
+                                      show-word-limit
+                                      type="textarea"
+                                      v-model="ruleForm2.content">
                             </el-input>
                         </el-form-item>
                         <el-form-item>
-                            <el-button style="float: right;" @click="submitReply">确定</el-button>
+                            <el-button @click="submitReply" style="float: right;">确定</el-button>
                         </el-form-item>
                     </el-form>
                 </div>
             </div>
 
         </div>
-        <p v-else><a href="/login">登录</a>请先登录</p>
+        <p v-else>要查看评论请先<a href="/login">登录</a></p>
     </div>
 </template>
 
@@ -73,6 +73,9 @@
 
     export default {
         name: "comment",
+        props: {
+            article_id: Number
+        },
         data() {
             return {
                 article: 1,  // 对某一资源进行评论
@@ -136,9 +139,11 @@
             }
         },
         created() {
+            var aid = parseInt(this.article_id);
+            window.console.log("/comment/" + aid);
             // 获取所有评论
-            //axios.get("/comment/"+this.article_id, {
-            axios.get("/comment/" + 1, {
+            axios.get("/comment/" + aid, {
+                //axios.get("/comment/" + 1, {
                 headers: {token: this.$store.state.token}
             }).then(rep => {
                 console.log(rep.data.status);
@@ -150,11 +155,12 @@
         },
         methods: {
             submitComment() {
+                var aid = parseInt(this.article_id);
                 this.$refs.ruleForm.validate((valid) => {
                     if (valid) {
                         axios.post("/comment", {
-                            //article_id: this.article_id,
-                            article_id: 1,
+                            article_id: aid,
+                            //article_id: 1,
                             content: this.ruleForm.content,
                         }, {
                             headers: {
@@ -175,12 +181,13 @@
                 });
             },
             submitReply() {
+                var aid = parseInt(this.article_id);
                 this.$refs.ruleForm2[0].validate((valid) => {
                     if (valid) {
                         axios.post("/comment", {
                             reply_to_id: this.current_reply_to_user_id,
-                            //article_id: this.article_id,
-                            article_id: 1,
+                            article_id: aid,
+                            //article_id: 1,
                             parent_id: this.current_parent_id,
                             root_id: this.current_root_id,
                             content: this.ruleForm2.content,
@@ -228,6 +235,12 @@
 </script>
 
 <style scoped>
+    .container {
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .content {
         /*min-height: 30px;*/
         word-wrap: break-word;

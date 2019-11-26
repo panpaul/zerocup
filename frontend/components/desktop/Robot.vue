@@ -13,7 +13,7 @@
                 </div>
             </div>
         </transition>
-        <div class="floatImg"><img @click="show = !show" alt="robot" src="../static/1.gif"/></div>
+        <div class="floatImg"><img @click="show = !show" alt="robot" src="../../static/1.gif"/></div>
 
     </div>
 </template>

@@ -26,9 +26,9 @@
 </template>
 
 <script>
-    import Menu from '@/components/Menu'
-    import Footer from '@/components/Footer'
-    import Robot from '@/components/Robot'
+    import Menu from '@/components/desktop/Menu'
+    import Footer from '@/components/desktop/Footer'
+    import Robot from '@/components/desktop/Robot'
 
     export default {
         name: 'desktop',

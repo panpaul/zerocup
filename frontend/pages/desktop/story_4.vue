@@ -1,7 +1,9 @@
 <template>
     <div id="story4">
-				<p>朗读文章</p>
-		<div class="aud"><audio :src="require('@/static/audios/story_4.mp3')" controls></audio></div>
+        <p>朗读文章</p>
+        <div class="aud">
+            <audio :src="require('@/static/audios/story_4.mp3')" controls></audio>
+        </div>
         <h2>机器控制的人生</h2>
         <p>
             既然大部分的产业， 甚至政府的主要功能， 都已经被AI去掉，那我们自然的会问， 人类在干什么。事实上， 这个时候最有用的职业可能是哲学家， 因为他们最喜欢的讨论是人生的意义何在， 这可是在这个时代非常有意义的话题，
@@ -26,22 +28,22 @@
         <img src="http://images.ofweek.com/Upload/News/2018-08/22/zhouxiyao/1534897287247057782.jpg">
         <br/><br/>
         <el-button-group>
-            <nuxt-link to="/story_3">
+            <nuxt-link to="/desktop/story_3">
                 <el-button icon="el-icon-arrow-left" type="primary">上一篇</el-button>
             </nuxt-link>
-            <nuxt-link to="/story_4">
+            <nuxt-link to="/desktop/story_4">
                 <el-button disabled type="primary">下一篇<i class="el-icon-arrow-right el-icon--right"></i></el-button>
             </nuxt-link>
-            <nuxt-link to="/ai">
+            <nuxt-link to="/desktop/ai">
                 <el-button round type="primary">看看其它</el-button>
             </nuxt-link>
         </el-button-group>
-        <Comment article_id=6 />
+        <Comment article_id="6"/>
     </div>
 </template>
 
 <script>
-    import Comment from '@/components/Comment.vue'
+    import Comment from '../../components/desktop/Comment.vue'
 
     export default {
         name: "story4",

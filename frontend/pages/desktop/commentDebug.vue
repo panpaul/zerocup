@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="commentContainer">
         <el-form :model="ruleForm" :rules="rules" ref="ruleForm" style="margin-top: 30px" v-if="$store.state.token">
             <el-form-item prop="content">
                 <el-input :rows="3"
@@ -20,7 +20,7 @@
         <div class="comment" v-for="item in comments" v-if="$store.state.token">
 
             <hr>
-            <img class="comment_user_head" src="../static/user.png">
+            <img :src="item.user.head_img" class="comment_user_head">
             <div>{{item.user.username}}</div>
             <span class="date">{{item.created_at}}</span>
 
@@ -33,7 +33,7 @@
 
 
                 <div style="padding-bottom: 15px" v-for="reply in item.replys">
-                    <img class="comment_user_head" src="../static/user.png">
+                    <img :src="reply.user.head_img" class="comment_user_head">
                     <span>{{reply.user.username}}</span><span>: </span>
                     <span>@{{reply.reply_to.username}}</span>
                     <div class="date">{{reply.created_at}}</div>
@@ -64,7 +64,7 @@
             </div>
 
         </div>
-        <p v-else>要查看评论请先<a href="/login">登录</a></p>
+        <p v-else><a href="/desktop/login">登录</a>请先登录</p>
     </div>
 </template>
 
@@ -73,9 +73,6 @@
 
     export default {
         name: "comment",
-        props: {
-            article_id: Number
-        },
         data() {
             return {
                 article: 1,  // 对某一资源进行评论
@@ -139,11 +136,9 @@
             }
         },
         created() {
-		var aid = parseInt(this.article_id);
-            window.console.log("/comment/"+aid);
             // 获取所有评论
-            axios.get("/comment/"+aid, {
-            //axios.get("/comment/" + 1, {
+            //axios.get("/comment/"+this.article_id, {
+            axios.get("/comment/" + 1, {
                 headers: {token: this.$store.state.token}
             }).then(rep => {
                 console.log(rep.data.status);
@@ -155,12 +150,11 @@
         },
         methods: {
             submitComment() {
-				var aid = parseInt(this.article_id);
                 this.$refs.ruleForm.validate((valid) => {
                     if (valid) {
                         axios.post("/comment", {
-                            article_id: aid,
-                            //article_id: 1,
+                            //article_id: this.article_id,
+                            article_id: 1,
                             content: this.ruleForm.content,
                         }, {
                             headers: {
@@ -181,13 +175,12 @@
                 });
             },
             submitReply() {
-				var aid = parseInt(this.article_id);
                 this.$refs.ruleForm2[0].validate((valid) => {
                     if (valid) {
                         axios.post("/comment", {
                             reply_to_id: this.current_reply_to_user_id,
-                            article_id: aid,
-                            //article_id: 1,
+                            //article_id: this.article_id,
+                            article_id: 1,
                             parent_id: this.current_parent_id,
                             root_id: this.current_root_id,
                             content: this.ruleForm2.content,
@@ -235,12 +228,6 @@
 </script>
 
 <style scoped>
-    .container {
-        max-width: 1000px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
     .content {
         /*min-height: 30px;*/
         word-wrap: break-word;

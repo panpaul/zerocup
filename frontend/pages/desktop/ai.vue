@@ -21,18 +21,18 @@
             </el-row>
         </div>
         <br/><br/>
-        <nuxt-link to="/goldtime">
+        <nuxt-link to="/desktop/goldtime">
             <el-button round type="primary">看看其它</el-button>
         </nuxt-link>
-		<Comment article_id=8 />
+        <Comment article_id="8"/>
     </div>
 </template>
 
 <script>
-    import {MnistData} from '@/tf/mnist/data';
+    import {MnistData} from '../../tf/mnist/data';
     import * as tfvis from "@tensorflow/tfjs-vis";
     import * as tf from "@tensorflow/tfjs";
-    import Comment from '@/components/Comment.vue'
+    import Comment from '../../components/desktop/Comment.vue'
 
     let data;
     const model = getModel();
@@ -208,8 +208,8 @@
                 TrainDis: true,
                 ShowResultDis: true,
             }
-		},
-		components: {
+        },
+        components: {
             Comment
         },
         methods: {
@@ -250,6 +250,6 @@
     #ai {
         float: left;
         margin-left: 5%;
-		width:60%;
+        width: 60%;
     }
 </style>

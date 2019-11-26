@@ -1,7 +1,9 @@
 <template>
     <div class="container" id="story1">
-				<p>朗读文章</p>
-		<div class="aud"><audio :src="require('@/static/audios/story_1.mp3')" controls></audio></div>
+        <p>朗读文章</p>
+        <div class="aud">
+            <audio :src="require('@/static/audios/story_1.mp3')" controls></audio>
+        </div>
         <h2>被重新定义的人类健康</h2>
         <p>
             想象20年后的一天早上，你大脑上带着的智能睡眠检测系统会根据你的脑电波图，根据你晚上经过的睡眠周期，确定是否该把你叫醒，然后你在徐徐启动的音乐里，一点点苏醒，开始你美妙的一天。
@@ -34,16 +36,16 @@
         <br/><br/>
         <el-button-group>
             <el-button disabled icon="el-icon-arrow-left" type="primary">上一篇</el-button>
-            <nuxt-link to="/story_2">
+            <nuxt-link to="/desktop/story_2">
                 <el-button type="primary">下一篇<i class="el-icon-arrow-right el-icon--right"></i></el-button>
             </nuxt-link>
         </el-button-group>
-        <Comment article_id=3 />
+        <Comment article_id="3"/>
     </div>
 </template>
 
 <script>
-    import Comment from '@/components/Comment.vue'
+    import Comment from '../../components/desktop/Comment.vue'
 
     export default {
         name: "story1",

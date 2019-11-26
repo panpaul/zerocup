@@ -1,8 +1,8 @@
 <template>
     <div class="bigger">
         <div class="container">
-            <nuxt-link to="/description">
-                <img alt="logo" class="imgWidth" src="../static/logo.png">
+            <nuxt-link to="/desktop/description">
+                <img alt="logo" class="imgWidth" src="../../static/logo.png">
             </nuxt-link>
 
             <br/><br/><br/><br/><br/><br/><br/><br/>
@@ -35,22 +35,22 @@
                     {
                         img: "http://www.elecfans.com/uploads/allimg/170713/01001263T_0.jpg",
                         name: "介绍",
-                        link: "/description"
+                        link: "/desktop/description"
                     },
                     {
                         img: "http://www.mhealthchina.org/wp-content/uploads/2018/05/2018051608530124.jpg",
                         name: "小故事",
-                        link: "/story_1"
+                        link: "/desktop/story_1"
                     },
                     {
-                        img: require("../static/ai.PNG"),
+                        img: require("../../static/ai.PNG"),
                         name: "AI实践",
-                        link: "/ai"
+                        link: "/desktop/ai"
                     },
                     {
                         img: "http://tc.sinaimg.cn/maxwidth.800/tc.service.weibo.com/mmbiz_qpic_cn/595192735740d68ab174822c2ce3a566.jpg",
                         name: "黄金时代",
-                        link: "/goldtime"
+                        link: "/desktop/goldtime"
                     },
                 ]
             }
@@ -74,7 +74,7 @@
 
 
     .container {
-        background-image: url("../static/background0.5.png");
+        background-image: url("../../static/background0.5.png");
         background-repeat: no-repeat;
         background-size: cover;
     }
