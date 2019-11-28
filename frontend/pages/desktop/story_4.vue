@@ -2,7 +2,7 @@
     <div id="story4">
         <p>朗读文章</p>
         <div class="aud">
-            <audio :src="require('@/static/audios/story_4.mp3')" controls></audio>
+            <audio controls src="../../static/audios/story_4.mp3"/>
         </div>
         <h2>机器控制的人生</h2>
         <p>
@@ -32,7 +32,7 @@
                 <el-button icon="el-icon-arrow-left" type="primary">上一篇</el-button>
             </nuxt-link>
             <nuxt-link to="/desktop/story_4">
-                <el-button disabled type="primary">下一篇<i class="el-icon-arrow-right el-icon--right"></i></el-button>
+                <el-button disabled type="primary">下一篇<i class="el-icon-arrow-right el-icon--right"/></el-button>
             </nuxt-link>
             <nuxt-link to="/desktop/ai">
                 <el-button round type="primary">看看其它</el-button>

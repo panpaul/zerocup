@@ -51,9 +51,6 @@ export default {
     ** Build configuration
     */
     build: {
-        vendor: [
-            'mint-ui'
-        ],
         transpile: [
             /^element-ui/,
             /^mint-ui/,

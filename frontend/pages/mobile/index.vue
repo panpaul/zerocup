@@ -25,7 +25,7 @@
     .mint-swipe {
         margin-right: auto;
         margin-left: auto;
-        height: 80vh;
+        height: 50vh;
         width: 80vw;
     }
 

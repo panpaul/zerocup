@@ -2,7 +2,7 @@
     <div id="story3">
         <p>朗读文章</p>
         <div class="aud">
-            <audio :src="require('@/static/audios/story_3.mp3')" controls></audio>
+            <audio controls src="../../static/audios/story_3.mp3"/>
         </div>
         <h2>空无一人的车间</h2>
         <p>
@@ -24,7 +24,7 @@
                 <el-button icon="el-icon-arrow-left" type="primary">上一篇</el-button>
             </nuxt-link>
             <nuxt-link to="/desktop/story_4">
-                <el-button type="primary">下一篇<i class="el-icon-arrow-right el-icon--right"></i></el-button>
+                <el-button type="primary">下一篇<i class="el-icon-arrow-right el-icon--right"/></el-button>
             </nuxt-link>
         </el-button-group>
         <Comment article_id="5"/>

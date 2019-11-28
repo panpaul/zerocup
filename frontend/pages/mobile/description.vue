@@ -1,16 +1,9 @@
 <template>
-    <div class="container" id="desc">
-        <el-card :body-style="{ padding: '0px' }" class="img" shadow="always">
-            <img alt="AI WordCloud" class="img1" src="../../static/wordcloud-alpha.png"/>
-            <div style="padding: 14px;">
-                <span>AI词云</span>
-            </div>
-        </el-card>
-        <div>
-            <p>朗读文章</p>
-            <div class="aud">
-                <audio controls src="../../static/audios/description.mp3"/>
-            </div>
+    <div id="description">
+        <h2>AI介绍</h2>
+
+        <div id="container">
+            <img alt="AI WordCloud" class="img1" src="../../static/ai_wordcloud.jpg"/>
             <p><strong>AI</strong>就是<strong>人工智能</strong></p>
             <p>它是研究、开发用于模拟、延伸和扩展人的智能的理论、方法、技术及应用系统的一门新的<strong>技术科学</strong>。</p>
             <p>人工智能是<strong>计算机科学</strong>的一个分支，它企图了解智能的实质，并生产出一种新的能以人类智能相似的方式做出反应的智能机器，该领域的研究包括机器人、语言识别、图像识别、自然语言处理和专家系统等。
@@ -23,47 +16,35 @@
                 强人工智能：指能制造出真正地推理和解决问题的智能机器。比如日本动漫里的“阿童木”、钢铁侠的AI管家“贾维斯”就可以说是一个强人工智能。
                 <br/>弱人工智能：只用于解决某些特定领域的问题，比如 AlphaGo，只会下围棋。
             </p>
-            <img class="img2" src="http://www.elecfans.com/uploads/allimg/170713/01001263T_0.jpg">
 
         </div>
-
-        <nuxt-link style="margin-left: 20%" to="/desktop/story_1">
-            <el-button round type="primary">看看其它</el-button>
-        </nuxt-link>
-
-        <Comment article_id="1"/>
+        <read :sound="require('../../static/audios/description.mp3')"/>
     </div>
 </template>
 
 <script>
-    import Comment from '../../components/desktop/Comment.vue'
+    import read from "../../components/mobile/read";
 
     export default {
-        transition: 'bounce',
         name: "description",
-        components: {
-            Comment
-        },
+        components: {read},
+        layout: "mobile",
     }
 </script>
 
 <style scoped>
-    p {
-        text-align: left;
+    h2 {
+        color: #6d727c;
+        text-align: center;
     }
 
-    .img {
-        float: right;
-        width: 30%;
-    }
-
-    .img1 {
+    img {
         width: 100%;
     }
 
-    .img2 {
-        width: 40%;
-        margin-left: 30%;
+    #container {
+        width: 80vw;
+        margin-right: auto;
+        margin-left: auto;
     }
-
 </style>
