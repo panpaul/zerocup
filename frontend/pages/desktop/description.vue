@@ -9,7 +9,7 @@
         <div>
             <p>朗读文章</p>
             <div class="aud">
-                <audio controls src="../../static/audios/description.mp3"/>
+                <audio :src="require('../../static/audios/description.mp3')" controls/>
             </div>
             <p><strong>AI</strong>就是<strong>人工智能</strong></p>
             <p>它是研究、开发用于模拟、延伸和扩展人的智能的理论、方法、技术及应用系统的一门新的<strong>技术科学</strong>。</p>
@@ -23,7 +23,7 @@
                 强人工智能：指能制造出真正地推理和解决问题的智能机器。比如日本动漫里的“阿童木”、钢铁侠的AI管家“贾维斯”就可以说是一个强人工智能。
                 <br/>弱人工智能：只用于解决某些特定领域的问题，比如 AlphaGo，只会下围棋。
             </p>
-            <img class="img2" src="http://www.elecfans.com/uploads/allimg/170713/01001263T_0.jpg">
+            <img alt="img" class="img2" src="../../static/desc.png">
 
         </div>
 
@@ -40,7 +40,7 @@
 
     export default {
         transition: 'bounce',
-        name: "description",
+        name: "desktopDescription",
         components: {
             Comment
         },

@@ -2,7 +2,7 @@
     <div class="container" id="story1">
         <p>朗读文章</p>
         <div class="aud">
-            <audio controls src="../../static/audios/story_1.mp3"/>
+            <audio :src="require('../../static/audios/story_1.mp3')" controls/>
         </div>
         <h2>被重新定义的人类健康</h2>
         <p>
@@ -32,7 +32,7 @@
             因此技术是可行的。 至于是否会像未来简史的作者Uval担心的那样将人类分成两个物种，我认为这样的可能并不大， 因为数据有关的技术从一个人迁移到另一个人成本不大。 正是因为有了AI的远程医疗系统，
             有些非常贫穷的地区目前可以接受到最先进地区的诊疗效果，这点上看AI是在消除不平等。
         </p>
-        <img src="http://www.mhealthchina.org/wp-content/uploads/2018/05/2018051608530124.jpg">
+        <img alt="medicare" src="../../static/story1.jpg">
         <br/><br/>
         <el-button-group>
             <el-button disabled icon="el-icon-arrow-left" type="primary">上一篇</el-button>
@@ -48,7 +48,7 @@
     import Comment from '../../components/desktop/Comment.vue'
 
     export default {
-        name: "story1",
+        name: "desktopStory1",
         components: {
             Comment
         },

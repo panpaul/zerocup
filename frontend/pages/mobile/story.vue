@@ -36,7 +36,7 @@
                         正是因为有了AI的远程医疗系统，
                         有些非常贫穷的地区目前可以接受到最先进地区的诊疗效果，这点上看AI是在消除不平等。
                     </p>
-                    <img alt="img" src="http://www.mhealthchina.org/wp-content/uploads/2018/05/2018051608530124.jpg">
+                    <img alt="medicare" src="../../static/story1.jpg">
                 </mt-tab-container-item>
                 <mt-tab-container-item id="story_2">
                     <h2>机器指引下的社交</h2>
@@ -70,7 +70,7 @@
                         配备了最好的视觉和听觉识别系统，
                         经过了多轮强化学习的机器也可以娴熟的完成。 那你要问劳动者在什么地方？都在玩啊，除了几个极为聪明的AI工程师。
                     </p>
-                    <img alt="img" src="http://www.sdkjjt.com/uploadfile/2016/0108/20160108015851861.jpg">
+                    <img alt="worker" src="../../static/story3.jpg">
                     <p>
                         分析： 这可能是你听到的公号上最多的一个故事， 关于自动化和失业。 我个人认为，首先这样一个故事真正实现的历程会很漫长，再有， 就算有那么多AI占领 了工厂的流水线，
                         就有更多的人进入到整个AI的生产线里，这并不仅仅包含程序员， 还包括需要大量检测AI在各种情况下行为合理性的人，
@@ -114,8 +114,7 @@
                         即使是21世纪初期的脑科学，也对这些一无所知，
                         而如果这些都有一天被突破， 那么我们所面临的就已经面临的不是人的存在意义与否的问题， 而是人类本身是否还需要存在了。 既然这个基本问题一时是没有答案了，我们也就不需要太过焦虑这个问题了。
                     </p>
-                    <img alt="img"
-                         src="http://images.ofweek.com/Upload/News/2018-08/22/zhouxiyao/1534897287247057782.jpg">
+                    <img alt="picture drew by AI" src="../../static/story4.jpg">
                 </mt-tab-container-item>
             </mt-tab-container>
         </div>
@@ -123,19 +122,19 @@
 
         <mt-tabbar fixed v-model="selected">
             <mt-tab-item id="story_1">
-                <img alt="icon" slot="icon" src="../../static/1.gif">
+                <img alt="icon" slot="icon" src="../../static/medical_pill.png">
                 被重新定义的人类健康
             </mt-tab-item>
             <mt-tab-item id="story_2">
-                <img slot="icon" src="../../static/1.gif">
+                <img slot="icon" src="../../static/social_media.png">
                 机器指引下的社交
             </mt-tab-item>
             <mt-tab-item id="story_3">
-                <img slot="icon" src="../../static/1.gif">
+                <img slot="icon" src="../../static/factory.png">
                 空无一人的车间
             </mt-tab-item>
             <mt-tab-item id="story_4">
-                <img slot="icon" src="../../static/1.gif">
+                <img slot="icon" src="../../static/life.png">
                 机器控制的人生
             </mt-tab-item>
         </mt-tabbar>
@@ -147,7 +146,7 @@
     import read from "../../components/mobile/read";
 
     export default {
-        name: "story",
+        name: "mobileStory",
         components: {read},
         layout: "mobile",
         data() {

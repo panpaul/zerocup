@@ -5,7 +5,7 @@
                 <nuxt-link to="/"><span style="float: left;padding: 3px;"><img alt="logo"
                                                                                src="../static/logo1.png"></span>
                 </nuxt-link>
-                <Menu style="float: right;"/>
+                <myMenu style="float: right;"/>
             </el-header>
             <el-container>
                 <el-container>
@@ -26,13 +26,13 @@
 </template>
 
 <script>
-    import Menu from '../components/desktop/Menu'
+    import myMenu from '../components/desktop/Menu'
     import Footer from '../components/desktop/Footer'
     import Robot from '../components/desktop/Robot'
 
     export default {
         name: 'desktop',
-        components: {Menu, Footer, Robot}
+        components: {myMenu, Footer, Robot}
     }
 </script>
 

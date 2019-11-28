@@ -2,7 +2,7 @@
     <div id="story2">
         <p>朗读文章</p>
         <div class="aud">
-            <audio controls src="../../static/audios/story_2.mp3"/>
+            <audio :src="require('../../static/audios/story_2.mp3')" controls/>
         </div>
         <h2>机器指引下的社交</h2>
         <p>
@@ -30,7 +30,7 @@
                 <el-button icon="el-icon-arrow-left" type="primary">上一篇</el-button>
             </nuxt-link>
             <nuxt-link to="/desktop/story_3">
-                <el-button type="primary">下一篇<i class="el-icon-arrow-right el-icon--right"></i></el-button>
+                <el-button type="primary">下一篇<i class="el-icon-arrow-right el-icon--right"/></el-button>
             </nuxt-link>
         </el-button-group>
         <Comment article_id="4"/>
@@ -41,7 +41,7 @@
     import Comment from '../../components/desktop/Comment.vue'
 
     export default {
-        name: "story2",
+        name: "desktopStory2",
         components: {
             Comment
         },

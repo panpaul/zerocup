@@ -20,7 +20,7 @@
 
 <script>
     export default {
-        name: 'menu',
+        name: 'mobileMenu',
         layout: 'mobile',
     }
 </script>

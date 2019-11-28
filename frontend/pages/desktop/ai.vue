@@ -199,7 +199,7 @@
 
     //tfvis.visor().open();
     export default {
-        name: "aiDebug",
+        name: "ai",
         data() {
             return {
                 LoadDis: false,

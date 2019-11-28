@@ -16,7 +16,7 @@
                 强人工智能：指能制造出真正地推理和解决问题的智能机器。比如日本动漫里的“阿童木”、钢铁侠的AI管家“贾维斯”就可以说是一个强人工智能。
                 <br/>弱人工智能：只用于解决某些特定领域的问题，比如 AlphaGo，只会下围棋。
             </p>
-
+            <img alt="img" src="../../static/desc.png">
         </div>
         <read :sound="require('../../static/audios/description.mp3')"/>
     </div>
@@ -26,7 +26,7 @@
     import read from "../../components/mobile/read";
 
     export default {
-        name: "description",
+        name: "mobileDescription",
         components: {read},
         layout: "mobile",
     }

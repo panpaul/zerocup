@@ -2,7 +2,7 @@
     <div class="container" id="story1">
         <p>朗读文章</p>
         <div class="aud">
-            <audio controls src="../../static/audios/news.mp3"/>
+            <audio :src="require('../../static/audios/news.mp3')" controls/>
         </div>
         <h2>当AI遇上武大，会擦出什么火花？</h2>
         <img alt="img1"
@@ -38,7 +38,7 @@
     import Comment from '../../components/desktop/Comment.vue'
 
     export default {
-        name: "news",
+        name: "desktopNews",
         components: {
             Comment
         },

@@ -34,7 +34,7 @@
     import read from "../../components/mobile/read";
 
     export default {
-        name: "news",
+        name: "mobileNews",
         components: {read},
         layout: "mobile",
     }

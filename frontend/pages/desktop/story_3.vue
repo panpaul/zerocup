@@ -2,7 +2,7 @@
     <div id="story3">
         <p>朗读文章</p>
         <div class="aud">
-            <audio controls src="../../static/audios/story_3.mp3"/>
+            <audio :src="require('../../static/audios/story_3.mp3')" controls/>
         </div>
         <h2>空无一人的车间</h2>
         <p>
@@ -10,7 +10,7 @@
             经过了多轮强化学习的机器也可以娴熟的完成。 那你要问劳动者在什么地方？都在玩啊，除了几个极为聪明的AI工程师。</p>
         <p>
         </p>
-        <img src="http://www.sdkjjt.com/uploadfile/2016/0108/20160108015851861.jpg">
+        <img alt="worker" src="../../static/story3.jpg">
         <p>
             分析： 这可能是你听到的公号上最多的一个故事， 关于自动化和失业。 我个人认为，首先这样一个故事真正实现的历程会很漫长，再有， 就算有那么多AI占领 了工厂的流水线，
             就有更多的人进入到整个AI的生产线里，这并不仅仅包含程序员， 还包括需要大量检测AI在各种情况下行为合理性的人， 就拿无人驾驶情况看，一辆新的无人驾驶车出来，那么它可能和之前车不一样的就不仅仅是发动机，
@@ -35,7 +35,7 @@
     import Comment from '../../components/desktop/Comment.vue'
 
     export default {
-        name: "story3",
+        name: "desktopStory3",
         components: {
             Comment
         },

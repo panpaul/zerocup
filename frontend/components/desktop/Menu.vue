@@ -1,6 +1,6 @@
 <template>
     <div id="menu">
-        <el-menu :default-active=this.$nuxt.$route.name
+        <el-menu :default-active=this.$nuxt.$route.fullPath
                  @select="handleSelect"
                  background-color="#B3C0D1"
                  class="menu"
@@ -36,7 +36,7 @@
     import Cookies from 'js-cookie'
 
     export default {
-        name: "menu",
+        name: "myMenu",
         methods: {
             handleSelect(key, keyPath) {
                 window.console.log(key, keyPath);

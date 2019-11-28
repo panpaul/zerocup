@@ -66,7 +66,7 @@ export default {
                     name: '[path][name].[ext]'
                 }
             })
-        }
+        },
     },
     env: {
         baseUrl: process.env.BASE_URL || 'http://localhost:3000'

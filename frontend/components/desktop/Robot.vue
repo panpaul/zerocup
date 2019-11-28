@@ -92,7 +92,7 @@
 
     .robotFooter {
         width: 100%;
-        height: 11%;
+        height: 14%;
         background: #666;
         position: absolute;
         bottom: 0;
@@ -102,7 +102,7 @@
     .robotFooter input {
         margin-top: 5px;
         width: 85%;
-        height: 45%;
+        height: 47%;
         outline: none;
 
         position: absolute;
@@ -114,7 +114,7 @@
         margin-top: 6px;
         display: inline-block;
         width: 10%;
-        height: 50%;
+        height: 54%;
         background: rgb(200, 221, 8);
         cursor: pointer;
         text-align: center;

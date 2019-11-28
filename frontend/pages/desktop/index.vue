@@ -29,17 +29,17 @@
 
 <script>
     export default {
-        name: 'Home',
+        name: 'desktopHome',
         data() {
             return {
                 items: [
                     {
-                        img: "http://www.elecfans.com/uploads/allimg/170713/01001263T_0.jpg",
+                        img: require("../../static/desc.png"),
                         name: "介绍",
                         link: "/desktop/description"
                     },
                     {
-                        img: "http://www.mhealthchina.org/wp-content/uploads/2018/05/2018051608530124.jpg",
+                        img: require("../../static/story1.jpg"),
                         name: "小故事",
                         link: "/desktop/story_1"
                     },
@@ -49,7 +49,7 @@
                         link: "/desktop/ai"
                     },
                     {
-                        img: "http://tc.sinaimg.cn/maxwidth.800/tc.service.weibo.com/mmbiz_qpic_cn/595192735740d68ab174822c2ce3a566.jpg",
+                        img: require("../../static/goldtime1.png"),
                         name: "黄金时代",
                         link: "/desktop/goldtime"
                     },

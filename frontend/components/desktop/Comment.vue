@@ -9,7 +9,7 @@
                           resize="none"
                           show-word-limit
                           type="textarea"
-                          v-model="ruleForm.content"></el-input>
+                          v-model="ruleForm.content"/>
             </el-form-item>
             <el-form-item>
 
@@ -74,7 +74,7 @@
     export default {
         name: "comment",
         props: {
-            article_id: Number
+            article_id: String
         },
         data() {
             return {
@@ -110,7 +110,7 @@
                             username: '',
                             head_img: ''
                         },
-                        article_id: 0,
+                        article_id: "0",
                         content: '',
                         created_at: '',
                         like_count: 0,
@@ -139,7 +139,7 @@
             }
         },
         created() {
-            var aid = parseInt(this.article_id);
+            let aid = parseInt(this.article_id);
             window.console.log("/comment/" + aid);
             // 获取所有评论
             axios.get("/comment/" + aid, {
@@ -155,7 +155,7 @@
         },
         methods: {
             submitComment() {
-                var aid = parseInt(this.article_id);
+                let aid = parseInt(this.article_id);
                 this.$refs.ruleForm.validate((valid) => {
                     if (valid) {
                         axios.post("/comment", {
@@ -181,7 +181,7 @@
                 });
             },
             submitReply() {
-                var aid = parseInt(this.article_id);
+                let aid = parseInt(this.article_id);
                 this.$refs.ruleForm2[0].validate((valid) => {
                     if (valid) {
                         axios.post("/comment", {
@@ -211,11 +211,6 @@
                     }
                 });
             },
-            /**
-             * 点击评论按钮显示输入框
-             * item: 当前大评论
-             * reply: 当前回复的评论
-             */
             showCommentInput(item, reply) {
                 // 如果回复了回复
                 if (reply) {

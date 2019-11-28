@@ -2,7 +2,7 @@
     <div id="story4">
         <p>朗读文章</p>
         <div class="aud">
-            <audio controls src="../../static/audios/story_4.mp3"/>
+            <audio :src="require('../../static/audios/story_4.mp3')" controls/>
         </div>
         <h2>机器控制的人生</h2>
         <p>
@@ -25,7 +25,7 @@
             当然， 那些相对论，进化论级别的发现呢？ 这也许并非AI一时所能级，因为本质上这些东西需要AI建立对世界的整个认知系统， 和最关键的，对自我的认知， 即使是21世纪初期的脑科学，也对这些一无所知，
             而如果这些都有一天被突破， 那么我们所面临的就已经面临的不是人的存在意义与否的问题， 而是人类本身是否还需要存在了。 既然这个基本问题一时是没有答案了，我们也就不需要太过焦虑这个问题了。
         </p>
-        <img src="http://images.ofweek.com/Upload/News/2018-08/22/zhouxiyao/1534897287247057782.jpg">
+        <img alt="picture drew by AI" src="../../static/story4.jpg">
         <br/><br/>
         <el-button-group>
             <nuxt-link to="/desktop/story_3">
@@ -46,7 +46,7 @@
     import Comment from '../../components/desktop/Comment.vue'
 
     export default {
-        name: "story4",
+        name: "desktopStory4",
         components: {
             Comment
         },
