@@ -1,38 +1,28 @@
 <template>
-    <div class="floatImg">
-        <transition name="el-fade-in">
-            <div id="robotContainer" v-show="show">
-                <ul class="robotContent">
-                    <li :key="index" v-for="(item, index) in messageList">
-                        <span :class="'span'+(item.myself?'right':'left')">{{item.message}}</span>
-                    </li>
-                </ul>
-                <br>
-                <div class="robotFooter">
-                    <label for="text"/>
-                    <input @keyup.enter='sendBtn' id="text" placeholder="说点什么吧..." type="text"
-                           v-model.trim="inputValue"/>
-                    <span @click="sendBtn()" id="btn">发送</span>
-                </div>
-            </div>
-        </transition>
-        <div class="floatImg"><img @click="show = !show" alt="robot" src="../../static/1.gif"/></div>
-
+    <div id="mobileRobotContainer">
+        <ul class="robotContent" style="padding-left: 0;">
+            <li :key="index" v-for="(item, index) in messageList">
+                <span :class="'span'+(item.myself?'right':'left')">{{item.message}}</span>
+            </li>
+        </ul>
+        <br>
+        <div class="robotFooter">
+            <label for="text"/>
+            <input @keyup.enter='sendBtn' id="text" placeholder="说点什么吧..." type="text" v-model.trim="inputValue"/>
+            <span @click="sendBtn()" id="btn">发送</span>
+        </div>
     </div>
 </template>
 
 <script>
-    import $ from 'jquery';
+    import $ from 'jquery'
 
     export default {
-        name: 'robot',
+        name: "mobileRobot",
         data() {
             return {
-                //输入的内容,事先约定好的
-                inputValue: '',
-                //聊天的数组内容
+                inputValue: "",
                 messageList: [],
-                show: false,
             }
         },
         methods: {
@@ -53,43 +43,29 @@
                             message: data.text,
                             myself: false
                         });
-
                     }
                 });
                 this.inputValue = ""
             }
-        },
+        }
     }
 </script>
+
 <style scoped>
-    * {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-    }
-
-    .floatImg {
-        bottom: -70px;
-        right: -40px;
-        position: fixed;
-        float: bottom;
-        z-index: 999;
-    }
-
-    #robotContainer {
+    #mobileRobotContainer {
         box-shadow: 10px 10px 25px #777;
-        position: fixed;
-        bottom: 220px;
-        right: 30px;
-        width: 40%;
-        max-width: 700px;
-        height: 30%;
         background-color: rgba(179, 192, 209, 0.5);
+        position: absolute;
+        margin-top: 10px;
+        width: 90vw;
+        min-height: 200px;
+        left: 5vw;
     }
 
     .robotFooter {
+        margin-top: 5px;
         width: 100%;
-        height: 14%;
+        height: 35px;
         background: #666;
         position: absolute;
         bottom: 0;
@@ -97,9 +73,9 @@
     }
 
     .robotFooter input {
-        margin-top: 5px;
+        margin-top: 4px;
         width: 85%;
-        height: 47%;
+        height: 20px;
         outline: none;
 
         position: absolute;
@@ -108,14 +84,13 @@
     }
 
     .robotFooter span {
-        margin-top: 6px;
+        margin-top: 5px;
         display: inline-block;
         width: 10%;
-        height: 54%;
+        height: 25px;
         background: rgb(200, 221, 8);
         cursor: pointer;
         text-align: center;
-        font-size: 12px;
         position: absolute;
         right: 1%;
         border-radius: 6px;
@@ -131,7 +106,7 @@
     }
 
     .robotContent li {
-        margin-top: 0%;
+        margin-top: 0;
         display: block;
         clear: both;
         overflow: hidden;
@@ -140,7 +115,7 @@
     .robotContent li span {
         padding: 2%;
         border-radius: 10px;
-        max-width: 310px;
+        max-width: 85vw;
         border: 1px solid #ccc;
         box-shadow: 0 0 3px #ccc;
         word-break: break-all
@@ -155,6 +130,4 @@
         float: right;
         background: #7cfc00;
     }
-
-
 </style>

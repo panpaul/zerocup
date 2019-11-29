@@ -14,7 +14,7 @@
         </div>
         <div class="container1">
             <br><br>
-            <el-carousel :interval="4000" height="200px" type="card">
+            <el-carousel :interval="4000" height="300px" type="card">
                 <el-carousel-item :key="item" v-for="item in items">
                     <nuxt-link :to=item.link>
                         <h2>{{item.name}}</h2>

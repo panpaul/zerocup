@@ -1,6 +1,7 @@
 <template>
     <div>
         <h1 style="text-align: center">AI时代</h1>
+
         <mt-swipe>
             <mt-swipe-item>
                 <nuxt-link to="/mobile/description">
@@ -8,37 +9,37 @@
                     <img alt="description" src="../../static/desc.png">
                 </nuxt-link>
             </mt-swipe-item>
-
             <mt-swipe-item>
                 <nuxt-link to="/mobile/story">
                     <div class="textBox">AI小故事</div>
                     <img alt="description" src="../../static/story1.jpg">
                 </nuxt-link>
             </mt-swipe-item>
-
             <mt-swipe-item>
                 <nuxt-link to="/mobile/news">
                     <div class="textBox">武大AI</div>
                     <img alt="description" src="../../static/news1.webp">
                 </nuxt-link>
             </mt-swipe-item>
-
             <mt-swipe-item>
                 <nuxt-link to="/mobile/goldtime">
                     <div class="textBox">黄金时代</div>
                     <img alt="description" src="../../static/goldtime1.png">
                 </nuxt-link>
             </mt-swipe-item>
-
-
         </mt-swipe>
+
+        <mobile-robot/>
     </div>
 </template>
 
 <script>
+    import mobileRobot from "../../components/mobile/robot";
+
     export default {
         name: "mobileIndex",
-        layout: "mobile"
+        layout: "mobile",
+        components: {mobileRobot},
     };
 </script>
 
