@@ -15,10 +15,10 @@
         <div class="container1">
             <br><br>
             <el-carousel :interval="4000" height="300px" type="card">
-                <el-carousel-item :key="item" v-for="item in items">
-                    <nuxt-link :to=item.link>
-                        <h2>{{item.name}}</h2>
-                        <img :alt=item.name :src=item.img class="carouselImg">
+                <el-carousel-item :key="i.name" v-for="i in myItems">
+                    <nuxt-link :to=i.link>
+                        <h2>{{i.name}}</h2>
+                        <img :alt=i.name :src=i.img class="carouselImg">
                     </nuxt-link>
                 </el-carousel-item>
             </el-carousel>
@@ -32,7 +32,7 @@
         name: 'desktopHome',
         data() {
             return {
-                items: [
+                myItems: [
                     {
                         img: require("../../static/desc.png"),
                         name: "介绍",
