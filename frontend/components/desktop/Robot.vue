@@ -28,9 +28,7 @@
         name: 'robot',
         data() {
             return {
-                //输入的内容,事先约定好的
                 inputValue: '',
-                //聊天的数组内容
                 messageList: [],
                 show: false,
             }
