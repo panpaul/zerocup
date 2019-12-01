@@ -64,7 +64,7 @@
             </div>
 
         </div>
-        <p v-else>要查看评论请先<a href="/login">登录</a></p>
+        <p v-else>要查看评论请先<a href="/desktop/login">登录</a></p>
     </div>
 </template>
 

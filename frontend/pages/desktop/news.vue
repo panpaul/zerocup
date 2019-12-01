@@ -47,7 +47,7 @@
 
 <style scoped>
     p {
-        font-size: 150%;
+        font-size: 100%;
     }
 
     h2 {
