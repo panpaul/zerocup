@@ -2,8 +2,10 @@
     <div id="desktop">
         <el-container>
             <el-header>
-                <nuxt-link to="/"><span style="float: left;padding: 3px;"><img alt="logo"
-                                                                               src="../static/logo1.png"></span>
+                <nuxt-link to="/">
+                    <span style="float: left;padding: 3px;">
+                        <img alt="logo" src="../static/logo1.png">
+                    </span>
                 </nuxt-link>
                 <myMenu style="float: right;"/>
             </el-header>
@@ -17,7 +19,6 @@
                     <el-footer>
                         <Footer/>
                     </el-footer>
-
                 </el-container>
             </el-container>
         </el-container>
@@ -38,14 +39,12 @@
 
 <style>
     .el-header {
-        background-color: #B3C0D1;
-        color: #333;
+        background-color: #D6DDE6;
         line-height: 60px;
     }
 
     .el-footer {
-        background-color: #B3C0D1;
-        color: #333;
+        background-color: #D6DDE6;
         text-align: center;
         line-height: 60px;
     }

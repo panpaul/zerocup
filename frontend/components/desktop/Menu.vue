@@ -2,7 +2,7 @@
     <div id="menu">
         <el-menu :default-active=this.$nuxt.$route.fullPath
                  @select="handleSelect"
-                 background-color="#B3C0D1"
+                 background-color="#D6DDE6"
                  class="menu"
                  mode="horizontal"
                  router
