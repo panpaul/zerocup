@@ -1,3 +1,8 @@
+/*
+ * @Date: 2020-10-17 20:05:10
+ * @LastEditors: QiuJhao
+ * @LastEditTime: 2020-10-18 22:39:17
+ */
 export default {
     mode: 'universal',
     /*
@@ -69,7 +74,7 @@ export default {
         },
     },
     env: {
-        baseUrl: process.env.BASE_URL || 'http://localhost:3000'
+        baseUrl: process.env.BASE_URL || 'http://localhost:5000'
     },
     router: {
         extendRoutes(routes) {
