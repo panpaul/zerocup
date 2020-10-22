@@ -1,3 +1,8 @@
+<!--
+ * @Date: 2020-10-17 20:05:10
+ * @LastEditors: QiuJhao
+ * @LastEditTime: 2020-10-22 09:46:27
+-->
 <template>
     <div class="register">
         <el-form :model="ruleForm" :rules="rules" label-width="100px" ref="ruleForm">
@@ -66,7 +71,7 @@
                             console.log(rep);
                             if (rep.data.status === 200) {
                                 this.$message.success("注册成功");
-                                setInterval(() => {
+                                setTimeout(() => {
                                     location.href = "/desktop/login"
                                 }, 1000)
                             } else if (rep.data.status === 40002) {
